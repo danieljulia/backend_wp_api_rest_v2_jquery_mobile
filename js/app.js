@@ -1,6 +1,10 @@
 
-//cal modificar aquest url i apuntar a la instal·lació de wp
-var BASE_URL='http://kiwoo.dev/html/wordpress';
+/**
+Es necesario modificar esta url y apuntar a la instalación  de wp
+Por ejemplo http://localhost/Wordpress
+*/
+
+var BASE_URL='http://kiwoo.dev/wordpress';
 
 var app = {
 
@@ -14,18 +18,19 @@ var app = {
 
 		$.ajax({
 			type: 'GET',
-			url: rootURL + '/posts',
+			url: rootURL + '/posts?_jsonp=?', //añadir parámetro jsonp si queremos que funcione en otro dominio
 			dataType: 'json',
 			success: function(data){
-				
+
 				$.each(data, function(index, value) {
 					console.log(value);
-					
-			      $('ul.topcoat-list').append('<li class="topcoat-list__item">' +
+
+			      $('ul.post-list').append('<li class="post-list__item">' +
 			      //	'<img src="'+value.featured_image.attachment_meta.sizes.medium.url+'" /><br>' +
 			      	'<h3>'+value.title.rendered+'</h3>' +
 			      	'<p>'+value.excerpt.rendered+'</p></li>');
 			    });
+					 $("ul.post-list").listview("refresh");
 			},
 			error: function(error){
 				console.log(error);

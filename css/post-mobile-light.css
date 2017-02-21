@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: "Source Sans";
   src: url("../font/SourceSansPro-Regular.otf");
 }
@@ -11,24 +11,24 @@
   font-family: "Source Sans";
   src: url("../font/SourceSansPro-Semibold.otf");
   font-weight: 600;
-}
+}*/
 
 body {
   margin: 0;
   padding: 0;
-  background: #3a3f42 url("../img/bg_dark.png") repeat-x;
+  background: #dfe2e2;
   color: #000;
   font: 16px "Source Sans", helvetica, arial, sans-serif;
   font-weight: 200;
   text-rendering: optimizeLegibility;
 }
 
-.topcoat-icon--menu-stack {
-  background: url("../img/hamburger_light.svg") no-repeat;
+/*.post-icon--menu-stack {
+  background: url("../img/hamburger_dark.svg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-}
+}*/
 
 .quarter {
   width: 25%;
@@ -113,16 +113,16 @@ limitations under the License.
 
  .is-disabled - Simulates a disabled state on mobile devices
 
-    <a class="topcoat-button">Button</a>
-    <a class="topcoat-button is-active">Button</a>
-    <a class="topcoat-button is-disabled">Button</a>
+    <a class="post-button">Button</a>
+    <a class="post-button is-active">Button</a>
+    <a class="post-button is-disabled">Button</a>
 */
-.topcoat-button,
-.topcoat-button--quiet,
-.topcoat-button--large,
-.topcoat-button--large--quiet,
-.topcoat-button--cta,
-.topcoat-button--large--cta {
+.post-button,
+.post-button--quiet,
+.post-button--large,
+.post-button--large--quiet,
+.post-button--cta,
+.post-button--large--cta {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -151,26 +151,26 @@ limitations under the License.
   font-size: 16px;
   line-height: 3rem;
   letter-spacing: 1px;
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
+  color: #454545;
+  text-shadow: 0 1px #fff;
   vertical-align: top;
-  background-color: #595b5b;
-  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.12);
-  box-shadow: inset 0 1px rgba(255,255,255,0.12);
-  border: 1px solid rgba(0,0,0,0.36);
+  background-color: #e5e9e8;
+  -webkit-box-shadow: inset 0 1px #fff;
+  box-shadow: inset 0 1px #fff;
+  border: 1px solid #a5a8a8;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
-.topcoat-button:active,
-.topcoat-button.is-active,
-.topcoat-button--large:active,
-.topcoat-button--large.is-active {
-  background-color: #404141;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+.post-button:active,
+.post-button.is-active,
+.post-button--large:active,
+.post-button--large.is-active {
+  background-color: #d3d7d7;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button:disabled,
-.topcoat-button.is-disabled {
+.post-button:disabled,
+.post-button.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -187,29 +187,29 @@ limitations under the License.
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--quiet">Button</a>
-    <a class="topcoat-button--quiet is-active">Button</a>
-    <a class="topcoat-button--quiet is-disabled">Button</a>
+    <a class="post-button--quiet">Button</a>
+    <a class="post-button--quiet is-active">Button</a>
+    <a class="post-button--quiet is-disabled">Button</a>
 */
-.topcoat-button--quiet {
+.post-button--quiet {
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.topcoat-button--quiet:active,
-.topcoat-button--quiet.is-active,
-.topcoat-button--large--quiet:active,
-.topcoat-button--large--quiet.is-active {
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  background-color: #404141;
-  border: 1px solid rgba(0,0,0,0.36);
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+.post-button--quiet:active,
+.post-button--quiet.is-active,
+.post-button--large--quiet:active,
+.post-button--large--quiet.is-active {
+  color: #454545;
+  text-shadow: 0 1px #fff;
+  background-color: #d3d7d7;
+  border: 1px solid #a5a8a8;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button--quiet:disabled,
-.topcoat-button--quiet.is-disabled {
+.post-button--quiet:disabled,
+.post-button--quiet.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -226,17 +226,17 @@ limitations under the License.
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--large" >Button</a>
-    <a class="topcoat-button--large is-active" >Button</a>
-    <a class="topcoat-button--large is-disabled" >Button</a>
+    <a class="post-button--large" >Button</a>
+    <a class="post-button--large is-active" >Button</a>
+    <a class="post-button--large is-disabled" >Button</a>
 */
-.topcoat-button--large,
-.topcoat-button--large--quiet {
+.post-button--large,
+.post-button--large--quiet {
   font-size: 1.3rem;
   line-height: 4rem;
 }
-.topcoat-button--large:disabled,
-.topcoat-button--large.is-disabled {
+.post-button--large:disabled,
+.post-button--large.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -254,18 +254,18 @@ limitations under the License.
  .is-disabled - Simulates disabled state
 
 
-    <a class="topcoat-button--large--quiet" >Button</a>
-    <a class="topcoat-button--large--quiet is-active" >Button</a>
-    <a class="topcoat-button--large--quiet is-disabled" >Button</a>
+    <a class="post-button--large--quiet" >Button</a>
+    <a class="post-button--large--quiet is-active" >Button</a>
+    <a class="post-button--large--quiet is-disabled" >Button</a>
 */
-.topcoat-button--large--quiet {
+.post-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.topcoat-button--large--quiet:disabled,
-.topcoat-button--large--quiet.is-disabled {
+.post-button--large--quiet:disabled,
+.post-button--large--quiet.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -283,13 +283,13 @@ limitations under the License.
  .is-disabled - Simulates disabled state
 
 
-    <a class="topcoat-button--cta" >Button</a>
-    <a class="topcoat-button--cta is-active" >Button</a>
-    <a class="topcoat-button--cta is-disabled" >Button</a>
+    <a class="post-button--cta" >Button</a>
+    <a class="post-button--cta is-active" >Button</a>
+    <a class="post-button--cta is-disabled" >Button</a>
 
 */
-.topcoat-button--cta,
-.topcoat-button--large--cta {
+.post-button--cta,
+.post-button--large--cta {
   border: 1px solid #143250;
   background-color: #288edf;
   -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.36);
@@ -298,16 +298,16 @@ limitations under the License.
   font-weight: 500;
   text-shadow: 0 -1px rgba(0,0,0,0.36);
 }
-.topcoat-button--cta:active,
-.topcoat-button--cta.is-active,
-.topcoat-button--large--cta:active,
-.topcoat-button--large--cta.is-active {
-  background-color: #1976c3;
+.post-button--cta:active,
+.post-button--cta.is-active,
+.post-button--large--cta:active,
+.post-button--large--cta.is-active {
+  background-color: #0380e8;
   -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
   box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-button--cta:disabled,
-.topcoat-button--cta.is-disabled {
+.post-button--cta:disabled,
+.post-button--cta.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -324,16 +324,16 @@ limitations under the License.
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-button--large--cta" >Button</a>
-    <a class="topcoat-button--large--cta is-active" >Button</a>
-    <a class="topcoat-button--large--cta is-disabled" >Button</a>
+    <a class="post-button--large--cta" >Button</a>
+    <a class="post-button--large--cta is-active" >Button</a>
+    <a class="post-button--large--cta is-disabled" >Button</a>
 */
-.topcoat-button--large--cta {
+.post-button--large--cta {
   font-size: 1.3rem;
   line-height: 4rem;
 }
-.topcoat-button--large-cta:disabled,
-.topcoat-button--large--cta.is-disabled {
+.post-button--large-cta:disabled,
+.post-button--large--cta.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -366,22 +366,22 @@ limitations under the License.
 
  .is-disabled - Simulates a disabled state on mobile devices
 
-    <a class="topcoat-icon-button">
-        <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button">
+        <span class="post-icon post-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button is-active">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button is-active">
+      <span class="post-icon post-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button is-disabled">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button is-disabled">
+      <span class="post-icon post-icon--menu-stack"></span>
     </a>
 */
-.topcoat-icon-button,
-.topcoat-icon-button--quiet,
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
+.post-icon-button,
+.post-icon-button--quiet,
+.post-icon-button--large,
+.post-icon-button--large--quiet {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -409,24 +409,24 @@ limitations under the License.
   padding: 0 0.75rem;
   line-height: 3rem;
   letter-spacing: 1px;
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
+  color: #454545;
+  text-shadow: 0 1px #fff;
   vertical-align: baseline;
-  background-color: #595b5b;
-  -webkit-box-shadow: inset 0 1px rgba(255,255,255,0.12);
-  box-shadow: inset 0 1px rgba(255,255,255,0.12);
-  border: 1px solid rgba(0,0,0,0.36);
+  background-color: #e5e9e8;
+  -webkit-box-shadow: inset 0 1px #fff;
+  box-shadow: inset 0 1px #fff;
+  border: 1px solid #a5a8a8;
   -webkit-border-radius: 6px;
   border-radius: 6px;
 }
-.topcoat-icon-button:active,
-.topcoat-icon-button.is-active {
-  background-color: #404141;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+.post-icon-button:active,
+.post-icon-button.is-active {
+  background-color: #d3d7d7;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-icon-button:disabled,
-.topcoat-icon-button.is-disabled {
+.post-icon-button:disabled,
+.post-icon-button.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -443,37 +443,37 @@ limitations under the License.
 
  .is-disabled - Simulates disabled state
 
-    <a class="topcoat-icon-button--quiet">
-        <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--quiet">
+        <span class="post-icon post-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button--quiet is-active">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--quiet is-active">
+      <span class="post-icon post-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button--quiet is-disabled">
-      <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--quiet is-disabled">
+      <span class="post-icon post-icon--menu-stack"></span>
     </a>
 */
-.topcoat-icon-button--quiet {
+.post-icon-button--quiet {
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.topcoat-icon-button--quiet:active,
-.topcoat-icon-button--quiet.is-active,
-.topcoat-icon-button--large--quiet:active,
-.topcoat-icon-button--large--quiet.is-active {
-  color: #c6c8c8;
-  text-shadow: 0 -1px rgba(0,0,0,0.69);
-  background-color: #404141;
-  border: 1px solid rgba(0,0,0,0.36);
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+.post-icon-button--quiet:active,
+.post-icon-button--quiet.is-active,
+.post-icon-button--large--quiet:active,
+.post-icon-button--large--quiet.is-active {
+  color: #454545;
+  text-shadow: 0 1px #fff;
+  background-color: #d3d7d7;
+  border: 1px solid #a5a8a8;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-icon-button--quiet:disabled,
-.topcoat-icon-button--quiet.is-disabled {
+.post-icon-button--quiet:disabled,
+.post-icon-button--quiet.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -490,32 +490,32 @@ limitations under the License.
 
  .is-disabled - Simulates a disabled state on mobile devices
 
-    <a class="topcoat-icon-button--large">
-        <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--large">
+        <span class="post-icon--large post-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button--large is-active">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--large is-active">
+      <span class="post-icon--large post-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button--large is-disabled">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--large is-disabled">
+      <span class="post-icon--large post-icon--menu-stack"></span>
     </a>
 */
-.topcoat-icon-button--large,
-.topcoat-icon-button--large--quiet {
+.post-icon-button--large,
+.post-icon-button--large--quiet {
   width: 4rem;
   height: 4rem;
   line-height: 4rem;
 }
-.topcoat-icon-button--large:active,
-.topcoat-icon-button--large.is-active {
-  background-color: #404141;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
+.post-icon-button--large:active,
+.post-icon-button--large.is-active {
+  background-color: #d3d7d7;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
 }
-.topcoat-icon-button--large:disabled,
-.topcoat-icon-button--large.is-disabled {
+.post-icon-button--large:disabled,
+.post-icon-button--large.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -532,32 +532,32 @@ limitations under the License.
 
  .is-disabled - Simulates a disabled state on mobile devices
 
-    <a class="topcoat-icon-button--large--quiet">
-        <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--large--quiet">
+        <span class="post-icon--large post-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button--large--quiet is-active">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--large--quiet is-active">
+      <span class="post-icon--large post-icon--menu-stack"></span>
     </a>
 
-    <a class="topcoat-icon-button--large--quiet is-disabled">
-      <span class="topcoat-icon--large topcoat-icon--menu-stack"></span>
+    <a class="post-icon-button--large--quiet is-disabled">
+      <span class="post-icon--large post-icon--menu-stack"></span>
     </a>
 */
-.topcoat-icon-button--large--quiet {
+.post-icon-button--large--quiet {
   background: transparent;
   border: 1px solid transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.topcoat-icon-button--large--quiet:disabled,
-.topcoat-icon-button--large--quiet.is-disabled {
+.post-icon-button--large--quiet:disabled,
+.post-icon-button--large--quiet.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
-.topcoat-icon,
-.topcoat-icon--large {
+.post-icon,
+.post-icon--large {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -566,7 +566,7 @@ limitations under the License.
   height: 1.5rem;
   vertical-align: middle;
 }
-.topcoat-icon--large {
+.post-icon--large {
   width: 2.5rem;
   height: 2.5rem;
 }
@@ -590,23 +590,23 @@ limitations under the License.
  List
  ------------
 
-    <div class="topcoat-list__container">
-      <h3 class="topcoat-list__header">Category</h3>
-      <ul class="topcoat-list">
-        <li class="topcoat-list__item">
+    <div class="post-list__container">
+      <h3 class="post-list__header">Category</h3>
+      <ul class="post-list">
+        <li class="post-list__item">
           Item
         </li>
-        <li class="topcoat-list__item">
+        <li class="post-list__item">
           Item
         </li>
-        <li class="topcoat-list__item">
+        <li class="post-list__item">
           Item
         </li>
       </ul>
     </div>
 
 */
-.topcoat-list__container {
+.post-list__container {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -620,36 +620,36 @@ limitations under the License.
   user-select: none;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  border-top: 1px solid #2f3234;
+  border-top: 1px solid #bcbfbf;
   border-bottom: 1px solid #eff1f1;
-  background-color: #444849;
+  background-color: #dfe2e2;
 }
-.topcoat-list__header {
+.post-list__header {
   margin: 0;
   padding: 4px 20px;
   font-size: 0.9em;
   font-weight: 400;
-  background-color: #3b3e40;
-  color: #868888;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.3);
-  border-top: solid 1px rgba(255,255,255,0.1);
-  border-bottom: solid 1px rgba(255,255,255,0.05);
+  background-color: #cccfcf;
+  color: #656565;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  border-top: solid 1px rgba(255,255,255,0.5);
+  border-bottom: solid 1px rgba(255,255,255,0.23);
 }
-.topcoat-list {
+.post-list {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  border-top: 1px solid #2f3234;
-  color: #c6c8c8;
+  border-top: 1px solid #bcbfbf;
+  color: #454545;
 }
-.topcoat-list__item {
+.post-list__item {
   margin: 0;
   padding: 0;
   padding: 1.25rem;
-  border-top: 1px solid #5e6061;
-  border-bottom: 1px solid #2f3234;
+  border-top: 1px solid #eff1f1;
+  border-bottom: 1px solid #bcbfbf;
 }
-.topcoat-list__item:first-child {
+.post-list__item:first-child {
   border-top: 1px solid rgba(0,0,0,0.05);
 }
 
@@ -672,23 +672,23 @@ limitations under the License.
 Navigation Bar
 --------------
 
-    <div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item left quarter">
-            <a class="topcoat-icon-button--quiet">
-              <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+    <div class="post-navigation-bar">
+        <div class="post-navigation-bar__item left quarter">
+            <a class="post-icon-button--quiet">
+              <span class="post-icon post-icon--menu-stack"></span>
             </a>
         </div>
-        <div class="topcoat-navigation-bar__item center half">
-            <h1 class="topcoat-navigation-bar__title">Header</h1>
+        <div class="post-navigation-bar__item center half">
+            <h1 class="post-navigation-bar__title">Header</h1>
         </div>
-        <div class="topcoat-navigation-bar__item right quarter">
-            <a class="topcoat-icon-button--quiet">
-              <span class="topcoat-icon topcoat-icon--edit"></span>
+        <div class="post-navigation-bar__item right quarter">
+            <a class="post-icon-button--quiet">
+              <span class="post-icon post-icon--edit"></span>
             </a>
         </div>
     </div>
 */
-.topcoat-navigation-bar {
+.post-navigation-bar {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -712,12 +712,12 @@ Navigation Bar
   height: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  background: #595b5b;
-  color: #fff;
-  -webkit-box-shadow: inset 0 -1px #333434, 0 1px rgba(0,0,0,0.15);
-  box-shadow: inset 0 -1px #333434, 0 1px rgba(0,0,0,0.15);
+  background: #e5e9e8;
+  color: #000;
+  -webkit-box-shadow: inset 0 -1 #b9bcbc, 0 1px rgba(0,0,0,0.95);
+  box-shadow: inset 0 -1 #b9bcbc, 0 1px rgba(0,0,0,0.95);
 }
-.topcoat-navigation-bar__item {
+.post-navigation-bar__item {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -737,7 +737,7 @@ Navigation Bar
   line-height: 4rem;
   vertical-align: top;
 }
-.topcoat-navigation-bar__title {
+.post-navigation-bar__title {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -750,7 +750,7 @@ Navigation Bar
   overflow: hidden;
   font-size: 1.3rem;
   font-weight: 400;
-  color: #fff;
+  color: #000;
 }
 
 /*
@@ -776,12 +776,12 @@ limitations under the License.
 
  .is-disabled - Simulates a disabled state
 
-    <input type="search" value="" placeholder="search" class="topcoat-search-input">
-    <input type="search is-disabled" value="" placeholder="search" class="topcoat-search-input">
+    <input type="search" value="" placeholder="search" class="post-search-input">
+    <input type="search is-disabled" value="" placeholder="search" class="post-search-input">
 
  */
-.topcoat-search-input,
-.topcoat-search-input--large {
+.post-search-input,
+.post-search-input--large {
   vertical-align: top;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -794,37 +794,37 @@ limitations under the License.
   font: inherit;
   font-weight: 200;
   outline: none;
-  border: 1px solid rgba(0,0,0,0.36);
-  background-color: #595b5b;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  color: #c6c8c8;
+  border: 1px solid #a5a8a8;
+  background-color: #e5e9e8;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  color: #454545;
   -webkit-appearance: none;
   padding: 0 0 0 2.7em;
   -webkit-border-radius: 30px;
   border-radius: 30px;
-  background-image: url("../img/search_light.svg");
+  background-image: url("../img/search.svg");
   background-position: 1em center;
   background-repeat: no-repeat;
   -webkit-background-size: 16px;
   -moz-background-size: 16px;
   background-size: 16px;
 }
-.topcoat-search-input:focus,
-.topcoat-search-input--large:focus {
+.post-search-input:focus,
+.post-search-input--large:focus {
   background-color: #fff;
   color: var-color-focus;
 }
-.topcoat-search-input::-webkit-search-cancel-button,
-.topcoat-search-input::-webkit-search-decoration {
+.post-search-input::-webkit-search-cancel-button,
+.post-search-input::-webkit-search-decoration {
   margin-right: 5px;
 }
-.topcoat-search-input:focus::-webkit-input-placeholder,
-.topcoat-search-input:focus::-webkit-input-placeholder {
+.post-search-input:focus::-webkit-input-placeholder,
+.post-search-input:focus::-webkit-input-placeholder {
   color: #c6c8c8;
 }
-.topcoat-search-input:disabled,
-.topcoat-search-input.is-disabled {
+.post-search-input:disabled,
+.post-search-input.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -837,11 +837,11 @@ limitations under the License.
 
  .is-disabled - Simulates a disabled state
 
-    <input type="search"  value="" placeholder="search" class="topcoat-search-input--large">
-    <input type="search"  value="" placeholder="search" class="topcoat-search-input--large .is-disabled">
+    <input type="search"  value="" placeholder="search" class="post-search-input--large">
+    <input type="search"  value="" placeholder="search" class="post-search-input--large .is-disabled">
 
 */
-.topcoat-search-input--large {
+.post-search-input--large {
   height: 4rem;
   font-size: 1.3rem;
   font-weight: 200;
@@ -853,8 +853,8 @@ limitations under the License.
   -moz-background-size: 1.3rem;
   background-size: 1.3rem;
 }
-.topcoat-search-input--large:disabled,
-.topcoat-search-input--large.is-disabled {
+.post-search-input--large:disabled,
+.post-search-input--large.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -882,12 +882,12 @@ limitations under the License.
 :disabled - Disabled state
 .is-disabled - Simulates a disabled state on mobile devices
 
-    <input type="text" class="topcoat-text-input" value="" placeholder="text">
-    <input type="text" class="topcoat-text-input is-disabled" value="" placeholder="text">
+    <input type="text" class="post-text-input" value="" placeholder="text">
+    <input type="text" class="post-text-input is-disabled" value="" placeholder="text">
 
 */
-.topcoat-text-input,
-.topcoat-text-input--large {
+.post-text-input,
+.post-text-input--large {
   vertical-align: top;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -900,18 +900,18 @@ limitations under the License.
   font: inherit;
   font-weight: 200;
   outline: none;
-  border: 1px solid rgba(0,0,0,0.36);
-  background-color: #595b5b;
-  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  box-shadow: inset 0 1px rgba(0,0,0,0.18);
-  color: #c6c8c8;
+  border: 1px solid #a5a8a8;
+  background-color: #e5e9e8;
+  -webkit-box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  box-shadow: inset 0 1px rgba(0,0,0,0.12);
+  color: #454545;
 }
-.topcoat-text-input:focus {
+.post-text-input:focus {
   background-color: #fff;
   color: #000;
 }
-.topcoat-text-input:disabled,
-.topcoat-text-input.is-disabled {
+.post-text-input:disabled,
+.post-text-input.is-disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
@@ -923,19 +923,19 @@ limitations under the License.
 :disabled - Disabled state
 .is-disabled - Simulates a disabled state on mobile devices
 
-    <input type="text" class="topcoat-text-input--large" value="" placeholder="text">
-    <input type="text" class="topcoat-text-input--large is-disabled" value="" placeholder="text">
+    <input type="text" class="post-text-input--large" value="" placeholder="text">
+    <input type="text" class="post-text-input--large is-disabled" value="" placeholder="text">
 */
-.topcoat-text-input--large {
+.post-text-input--large {
   height: 4rem;
   font-size: 1.3rem;
 }
-.topcoat-text-input--large:focus {
+.post-text-input--large:focus {
   background-color: #fff;
   color: #000;
 }
-.topcoat-text-input--large.is-disabled,
-.topcoat-text-input--large:disabled {
+.post-text-input--large.is-disabled,
+.post-text-input--large:disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;

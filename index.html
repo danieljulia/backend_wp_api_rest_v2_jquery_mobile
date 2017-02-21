@@ -6,43 +6,50 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>WP API REST + jquery mobile</title>
-    <link rel="stylesheet" href="css/topcoat-mobile-light.css">
+
+    <link rel="stylesheet" href="css/post-mobile-light.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
 
-    <div class="topcoat-navigation-bar">
-        <div class="topcoat-navigation-bar__item left quarter">
-            <a class="topcoat-icon-button--quiet">
-              <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+    <div class="post-navigation-bar">
+        <div class="post-navigation-bar__item left quarter">
+            <a class="post-icon-button--quiet">
+              <span class="post-icon post-icon--menu-stack"></span>
             </a>
         </div>
-        <div class="topcoat-navigation-bar__item center half">
-            <h1 class="topcoat-navigation-bar__title">WP API REST + jquery mobile</h1>
+        <div class="post-navigation-bar__item center half">
+            <h1 class="post-navigation-bar__title">WP API REST + jquery mobile</h1>
         </div>
-        <div class="topcoat-navigation-bar__item right quarter">
-            <a class="topcoat-icon-button--quiet">
-              <span class="topcoat-icon topcoat-icon--edit"></span>
+        <div class="post-navigation-bar__item right quarter">
+            <a class="post-icon-button--quiet">
+              <span class="post-icon post-icon--edit"></span>
             </a>
         </div>
     </div>
 
-    <div class="topcoat-list__container">
+    <div class="post-list__container">
 
-      <p >
-  Aquest exemple mostra l'integració de l'API rest v2 amb jquerymobile, cal modificar el punt d'entrada de WP a <a href='js/app.js'> l'script app.js </a>
+      <p>
+        Este ejemplo muestra la integración del API REST de WP con jquerymobile.
+        Es necesario modificar el punto de entrada de WP en el <a href='js/app.js'>script app.js</a>
+
   </p>
 
 
-      <h3 class="topcoat-list__header">Llistat d'entrades</h3>
-      <ul class="topcoat-list">
-        
+      <h3 class="post-list header">Listado de entradas</h3>
+
+
+      <ul class="post-list" data-role="listview" data-filter="true" data-input="#filter-for-listview">
+
+
       </ul>
     </div>
-    
+
     <!-- When in Phonegap folder uncomment this
     <script type="text/javascript" src="phonegap.js"></script>  -->
     <script type="text/javascript" src="js/jquery.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="js/app.js?f"></script>
     <script type="text/javascript">app.init();</script>
   </body>
