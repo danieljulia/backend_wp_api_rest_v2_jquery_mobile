@@ -1,0 +1,113 @@
+
+ add_action( 'init', 'create_post_type' );
+
+ function create_post_type() {
+   register_post_type( 'movies',
+   array(
+     'labels' => array(
+     'name' => __( 'Movies' ),
+     'singular_name' => __( 'Movie' )
+     ),
+     'public' => true,
+     'has_archive' => true,
+     'show_in_rest' => true, //importante
+     'rewrite' => array('slug' => 'movies'),
+     )
+   );
+ }
+
+ function custom_taxonomy() {
+
+	$labels = array(
+		'name'                       => _x( 'Género', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Género', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Género', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+    'show_in_rest'          => true, //importante
+    'rest_base'             => 'genero',
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'genero', array( 'movies' ), $args );
+
+}
+add_action( 'init', 'custom_taxonomy', 0 );
+
+
+
+
+function cmb2_sample_metaboxes() {
+  $prefix = '_miprefijo_';
+
+  //caja metabox
+  $cmb = new_cmb2_box( array(
+    'id' => 'test_metabox',
+    'title' => __( 'Movie Data', 'cmb2' ),
+    'object_types' => array( 'movies', ), //que aplica a nuestro tipo de contenido
+    'context' => 'normal',
+    'priority' => 'high',
+    'show_names' => true, // Show field names on the left
+  ) );
+
+  //un campo
+  $cmb->add_field( array(
+    'name' => __( 'Director', 'cmb2' ),
+    'id' => $prefix . 'director',
+    'type' => 'text_small',
+    'show_in_rest' => WP_REST_Server::READABLE,
+
+  ) );
+  //el resto de campos...
+
+}
+add_action( 'cmb2_init', 'cmb2_sample_metaboxes' );
+
+
+add_action( 'rest_api_init', 'crear_campos' );
+
+function crear_campos() {
+    register_rest_field( 'movies',
+        'genero',
+        array(
+            'get_callback'    => 'get_genero',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+		register_rest_field( 'movies',
+				'director',
+				array(
+						'get_callback'    => 'get_director',
+						'update_callback' => null,
+						'schema'          => null,
+				)
+		);
+    register_rest_field( 'movies',
+        'otro_campo',
+        array(
+            'get_callback'    => 'get_campo',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+
+function get_genero( $object, $field_name, $request ) {
+	//si es un campo de cmb2 lo recuperamos asi
+    return get_the_terms( $object[ 'id' ], "genero" );
+}
+
+function get_director( $object, $field_name, $request ) {
+	//si es un campo de cmb2 lo recuperamos asi
+    return get_post_meta( $object[ 'id' ], "_miprefijo_director", true );
+}
+
+function get_campo( $object, $field_name, $request ) {
+  return "el valor del campo";
+}
